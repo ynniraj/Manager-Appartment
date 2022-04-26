@@ -47,7 +47,7 @@ export default function Viewresidents() {
   const getresidents = () => {
     const viewlocalid = localStorage.getItem("viewid");
     axios
-      .get(`http://localhost:8080/getbyidFlat/${viewlocalid}`)
+      .get(`https://appartment-project.herokuapp.com/getbyidFlat/${viewlocalid}`)
       .then((response) => {
         console.log(response.data);
 

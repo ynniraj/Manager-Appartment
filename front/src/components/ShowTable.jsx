@@ -55,7 +55,7 @@ export default function ShowTable() {
 
   const handlePagination = () => {
     axios
-      .get(`http://localhost:8080/getFlatspagination?page=${count}&limit=3`)
+      .get(`https://appartment-project.herokuapp.com/getFlatspagination?page=${count}&limit=3`)
       .then((response) => {
         console.log(response.data);
         dispatch(setProducts(response.data.pageData));
@@ -68,7 +68,7 @@ export default function ShowTable() {
 
   const handleHighSort = () => {
     axios
-      .get(`http://localhost:8080/highsortedflat?page=${count}&limit=3`)
+      .get(`https://appartment-project.herokuapp.com/highsortedflat?page=${count}&limit=3`)
       .then((response) => {
         console.log(response.data);
         // setTableData(response.data.pageData);
@@ -80,7 +80,7 @@ export default function ShowTable() {
   };
   const handlelowSort = () => {
     axios
-      .get(`http://localhost:8080/lowsortedflat?page=${count}&limit=3`)
+      .get(`https://appartment-project.herokuapp.com/lowsortedflat?page=${count}&limit=3`)
       .then((response) => {
         console.log(response.data);
         // setTableData(response.data.pageData);
@@ -93,7 +93,7 @@ export default function ShowTable() {
   const handleSubmitBlock = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:8080/blockname/${e.target.block.value}`)
+      .get(`https://appartment-project.herokuapp.com/blockname/${e.target.block.value}`)
       .then((response) => {
         console.log(response.data);
         // setTableData(response.data);
@@ -105,7 +105,7 @@ export default function ShowTable() {
   };
   const handleOwnerSort = () => {
     axios
-      .get(`http://localhost:8080/byflattype/Owner`)
+      .get(`https://appartment-project.herokuapp.com/byflattype/Owner`)
       .then((response) => {
         console.log(response.data);
         dispatch(setProducts(response.data));
@@ -118,7 +118,7 @@ export default function ShowTable() {
   };
   const handleTenantSort = () => {
     axios
-      .get(`http://localhost:8080/byflattype/Tenant`)
+      .get(`https://appartment-project.herokuapp.com/byflattype/Tenant`)
       .then((response) => {
         console.log(response.data);
         // setTableData(response.data);

@@ -45,7 +45,7 @@ export default function FlatRegister() {
     };
     console.log(payload);
     axios
-      .post("https://manager-assignment.herokuapp.com/flatregister", payload)
+      .post("https://appartment-project.herokuapp.com/flatregister", payload)
       .then((res) => {
         console.log(res);
         alert("Flat created successfully");
@@ -63,7 +63,7 @@ export default function FlatRegister() {
     };
 
     axios
-      .post("https://manager-assignment.herokuapp.com/residents", payload)
+      .post("https://appartment-project.herokuapp.com/residents", payload)
       .then((res) => {
         console.log(res.data.response);
         localStorage.setItem(
